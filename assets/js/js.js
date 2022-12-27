@@ -55,10 +55,10 @@ window.onscroll = function () {
 function myNavbar() {
   if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
     document.getElementById("myNavbar").className =
-      "navbar navbar-expand-lg navbar-dark fixed-top bg-black";
+      "navbar navbar-expand-lg fixed-top bg-white";
   } else {
     document.getElementById("myNavbar").className =
-      "navbar navbar-expand-lg navbar-dark fixed-top bg-black bg-opacity-10";
+      "navbar navbar-expand-lg fixed-top bg-white bg-opacity-50";
   }
 }
 

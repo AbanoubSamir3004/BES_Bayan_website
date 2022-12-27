@@ -20,8 +20,12 @@
   background: var(--main-color);
 }
 :root {
-  --main-color: #fcb61c;
-  --main-color-rgb: 252, 182, 28;
+  --main-color: #43ad4b;
+  --main-color-rgb: 63, 173, 75;
+
+  --second-color: #26475f;
+  --second-color-rgb: 38, 71, 95;
+
 }
 .loaderGif {
   position: fixed;
@@ -107,16 +111,26 @@ li {
   top: 0;
   background-color: #00000080;
 }
-#myNavbar .nav-item:hover {
+#myNavbar .nav-item:hover ,
+  #myNavbar .nav-item.active {
   background-color: var(--main-color);
   border-radius: 4px;
 }
+
+
+#myNavbar .nav-item:hover a {
+  color: white;
+}
+#myNavbar .nav-item a {
+  color: var(--second-color);
+}
+
 .bg-nav {
   background-color: var(--main-color);
 }
 @media only screen and (max-width: 991px) {
   .navbar-collapse {
-    background-color: black;
+    background-color: var(--second-color);
 
     border-radius: 5px;
   }
@@ -127,6 +141,21 @@ li {
   .navbar-collapse #changeLang {
     margin: 0 16px;
   }
+  #myNavbar .nav-item a {
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 }
 .boxShadowMain {
   box-shadow: 23px -23px 20px 20px var(--main-color);
@@ -175,19 +204,111 @@ li {
 .border-main {
   border: 1px solid var(--main-color) !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.boxShadowSecond {
+  box-shadow: 23px -23px 20px 20px var(--second-color);
+}
+.text-second {
+  color: var(--second-color) !important;
+}
+.bg-second {
+  --bs-bg-opacity: 1;
+  background-color: rgba(
+    var(--second-color-rgb),
+    var(--bs-bg-opacity)
+  ) !important;
+}
+.btn-outline-second {
+  --bs-btn-color: var(--second-color);
+  --bs-btn-border-color: var(--second-color);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--second-color);
+  --bs-btn-hover-border-color: var(--second-color);
+  --bs-btn-focus-shadow-rgb: var(--second-color-rgb);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--second-color);
+  --bs-btn-active-border-color: var(--second-color);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--second-color);
+  --bs-btn-disabled-bg: transparent;
+  --bs-gradient: none;
+}
+.btn-second {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--second-color);
+  --bs-btn-border-color: var(--second-color);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #4a5c83;
+  --bs-btn-hover-border-color: #607299;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #607299;
+  --bs-btn-active-border-color: #607299;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--second-color);
+  --bs-btn-disabled-border-color: var(--second-color);
+}
+.border-second {
+  border: 1px solid var(--second-color) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header-section {
   position: relative;
   font-size: 50px;
+  color: var(--second-color);
 }
 .header-section .spanHeader {
-  background-color: var(--main-color);
-  top: 10px;
-  right: -17px;
-  width: 192px;
-  height: 30px;
+  top: 0;
+  right: -50px;
+  width: 170px;
+  height: 76px;
   position: absolute;
   z-index: 0;
+  clip-path: polygon(70% 51%, 92% 51%, 100% 100%, 0 100%, 0 93%, 70% 93%);
 }
+
+
+.cardOurView .spanHeader {
+  top: 24px;
+  right: 12px;
+  width: 90px;
+  height: 50px;
+  position: absolute;
+  z-index: 0;
+  clip-path: polygon(0 92%, 100% 92%, 100% 100%, 0% 100%);
+}
+
+
+
+
+
+
+
+
 .header-section .imgHeader {
   left: 0;
   height: 100px;
@@ -196,7 +317,7 @@ li {
   background-color: unset;
 }
 .spanHeaderNum {
-  background-color: black;
+  background-color: var(--second-color);
   top: 0;
   left: 26px;
   width: 170px;
@@ -222,21 +343,22 @@ li {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  box-shadow: inset 0 0 130px 20px black;
+  box-shadow: inset 0 0 130px 20px var(--second-color);
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .bgFixed {
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
   background-attachment: fixed;
 }
 .text-shadow {
-  text-shadow: 0 0px 12px black;
+  text-shadow: 0 0px 12px var(--second-color);
   color: white;
 }
 .boxShadowInset {
-  box-shadow: inset -20px 20px 86px 0 black;
+  box-shadow: inset 0 0 124px 0 var(--second-color);
 }
 .cardOurView .go-corner,
 .go-corner {
@@ -265,9 +387,9 @@ li {
   display: block;
   top: 0px;
   position: relative;
-  background-color: #f2f8f9;
+  background-color: #ffffffc7;
   border-radius: 4px;
-  padding: 32px 24px;
+  padding: 32px;
   text-decoration: none;
   overflow: hidden;
   border: 1px solid #f2f8f9;
@@ -283,7 +405,7 @@ li {
   z-index: 500;
 }
 .cardOurView:hover p {
-  color: black;
+  color: var(--second-color);
 }
 .cardOurView:hover .go-corner {
   transition: opactiy 0.3s linear;
@@ -330,7 +452,7 @@ li {
   z-index: 500;
 }
 .cardOurValues:hover p {
-  color: black;
+  color: var(--second-color);
 }
 .cardOurValues:hover .go-corner {
   transition: opactiy 0.3s linear;
@@ -369,7 +491,7 @@ li {
   z-index: 500;
 }
 .cardOurCampany:hover p {
-  color: black;
+  color: var(--second-color);
 }
 .cardOurCampany:hover .go-corner {
   transition: opactiy 0.3s linear;
