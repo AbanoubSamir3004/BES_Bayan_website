@@ -56,9 +56,10 @@ function myNavbar() {
   if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
     document.getElementById("myNavbar").className =
       "navbar navbar-expand-lg fixed-top bg-white";
-  } else {
+   } else {
     document.getElementById("myNavbar").className =
       "navbar navbar-expand-lg fixed-top bg-white bg-opacity-50";
+ 
   }
 }
 
