@@ -9,15 +9,7 @@ $(document).ready(function () {
       $("#changeLangText").text() == "EN" ? "AR" : "EN"
     );
   else {
-    if (x == "AR") {
-      $("html").prop("dir", "rtl");
-      $("#changeLangText").text("EN");
-      $("#bootstrapLink").prop("href", "assets/css/bootstrap.rtl.min.css");
-    } else {
-      $("html").prop("dir", "ltr");
-      $("#changeLangText").text("AR");
-      $("#bootstrapLink").prop("href", "assets/css/bootstrap.min.css");
-    }
+    changeLang()
   }
   $(".owl-carousel").owlCarousel({
     loop: true,
